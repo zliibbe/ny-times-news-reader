@@ -31,5 +31,6 @@ img {
 
 .title, .byline {
   text-decoration: none;
+  width: 40%
 }
 
