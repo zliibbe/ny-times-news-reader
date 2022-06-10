@@ -34,3 +34,10 @@ img {
   width: 40%
 }
 
+.title {
+  font-family: 'Domine', serif;
+} 
+
+.byline {
+  font-family: 'Arimo', sans-serif;
+}
