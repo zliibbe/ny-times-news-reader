@@ -9,7 +9,6 @@ const DataContextProvider = ({ children }) => {
   const getData = (type) => {
     fetchData(type)
     .then(data => {
-      console.log("data: ", data);
       setArticles(data.results)
     } )
   }
