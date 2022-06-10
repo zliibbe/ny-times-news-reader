@@ -7,12 +7,11 @@ import Article from '../Article/Article'
 
 const ArticleContainer = () => {
   const newYorkTimes = useContext(DataContext)
-  console.log(newYorkTimes.articles);
+  console.log("ArticleContainer:", newYorkTimes.articles);
   
   const createArticleCards = () => {
     return newYorkTimes.articles.map(article => {
-      console.log("Article: ", article)
-      return <Article key={article.title} title={article.title} image={article.multimedia[1].url} byline={article.byline} url={article.url} />
+      return <Article key={article.title} title={article.title} image={article.multimedia[1].url} byline={article.byline} url={article.short_url.substring(16)}/>
     })
   }
 
