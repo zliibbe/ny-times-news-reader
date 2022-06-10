@@ -3,12 +3,9 @@ import { NavLink } from "react-router-dom"
 import './Article.css'
 
 const Article = (props) => {
-  // const history = useHistory();
-
   return ( 
-    
     <NavLink to={`/${props.url}`}>
-      <div className='article' /*onClick={() => history.push(props.title)}*/>
+      <div className='article'>
         <div className='image-container'>
           <img src={props.image}/>      
         </div>
