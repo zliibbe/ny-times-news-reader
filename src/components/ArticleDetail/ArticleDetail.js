@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { DataContext } from '../../contexts/DataContext'
 import './ArticleDetail.css'
 
 
 const ArticleDetail = (props) => {
+  const articleDetail = useContext(DataContext)
+
   return (
     <div className='article-detail'>
-      <div>
-        <img href=""/>      
-      </div>
-      <div className=''>
-        <h2 className='title'>Title</h2>
-        <p className='abstract'>absract goes here</p>
-      </div>
-      
+        <div className='image-container'>
+          <img src={articleDetail.image}/>      
+        </div>
+        <div className='title-byline-container'>
+          <h2 className='title'>{articleDetail.title}</h2>
+          <p className='byline'>{articleDetail.byline}</p>
+        </div>
+        <p className='abstract'>{articleDetail.abstract}</p>
+
     </div>
   );
 }
@@ -20,7 +24,7 @@ const ArticleDetail = (props) => {
 export default ArticleDetail;
 
 /*
-<div className='article'>
+<div className='article-detail'>
       <h2 className='title'>{props.title}</h2>
       <div>
         <img href={props.image}/>      
