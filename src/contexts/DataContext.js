@@ -10,7 +10,7 @@ const DataContextProvider = ({ children }) => {
     fetchData(type)
     .then(data => {
       setArticles(data.results)
-    } )
+    })
   }
 
  
