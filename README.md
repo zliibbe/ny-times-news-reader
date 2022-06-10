@@ -81,6 +81,7 @@ In any of the views that show articles listed, the user is able to click on the 
 
 ## Future Additions
 
+- Add gifs to README
 - Add Cypress e2e testing
 - Deploy Site
 - Utilize the additional endpoints by adding additional buttons in header
@@ -97,7 +98,22 @@ In any of the views that show articles listed, the user is able to click on the 
 
 
 ## Contributors
-- [Zach Liibbe](https://github.com/zliibbe)
+<table style="width:75%">
+    <tr>
+        <th> Zach Liibbe</td>
+    </tr>
+    <tr>
+        <td>    
+        <a href="https://github.com/zliibbe">GitHub  -
+        <a href="https://www.linkedin.com/in/zachliibbe/">LinkedIn
+        </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+ <td><img src="https://github.com/zliibbe.png" alt="Zach"
+ width="150" height="auto" /></td>
+</table>
 
 ## Credits
 - [Create React App](https://create-react-app.dev/)
