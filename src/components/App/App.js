@@ -10,6 +10,7 @@ import Error from '../Error/Error'
 
 function App() {
   const articlesData = useContext(DataContext)
+  // const filterQuery = useContext()
 
   console.log("articlesData: ", articlesData)
   useEffect(() => {
@@ -22,13 +23,17 @@ function App() {
     <div className="App">
         <Layout>
           <Switch>
-            <Route exact path="/" render={() => <ArticleContainer />} />
+            <Route exact path="/" render={() => <ArticleContainer />}/>
+              
 
             <Route
-              exact
               path="/:article"
-              render={() => <ArticleDetail />}
-            ></Route>
+              render={({match}) =>{
+                 <ArticleDetail
+                 url={match.params.url}/>
+              }}
+            />
+            
 
             <Route>
               <Error />
