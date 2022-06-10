@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# NYT Top Stories
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+NYT Top Stories is the place to get your daily news. 
 
-In the project directory, you can run:
+### Endpoints
+This is a React application built using the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview). The Top Stories API returns an array of articles currently on the specified section.
 
-### `npm start`
+Endpoints include these section values: arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, and world.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Enpoint](https://user-images.githubusercontent.com/93230374/171770276-3e28a581-9341-4066-9229-feb13044b1f3.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+These are examples of the API's endpoints:
 
-### `npm test`
+```
+https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=yourkey
+https://api.nytimes.com/svc/topstories/v2/home.json?api-key=yourkey
+https://api.nytimes.com/svc/topstories/v2/science.json?api-key=yourkey
+https://api.nytimes.com/svc/topstories/v2/us.json?api-key=yourkey
+https://api.nytimes.com/svc/topstories/v2/world.json?api-key=yourkey
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Home Endpoint
+The `/home.json` endpoint gets the articles currently on the homepage for the New York Times website. The buttons at the top allow you to navigate to different sections, just like an old-timey newspaper.
 
-### `npm run build`
+### API Key
+An API key is required to utilize the API. Here's the [instructions](https://developer.nytimes.com/get-started) to get started using the API. Once you create a developer account on New York Times, you'll have to register your application to access the API key.
+- Tip: Store your API key in a `.env` or `.env.local` file as environment variables in the root of your project. Make sure the `.env` or `.env.local` is added to the `.gitignore` file so you dont accidentally push up your API key. [Read more](https://create-react-app.dev/docs/adding-custom-environment-variables/#adding-development-environment-variables-in-env)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Project Management Tools
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Wireframes
+  Visit the [Figma](https://www.figma.com/file/iRUEaJ307s8nNkrBffwTaC/NY-Times-Reader) page to see them in full.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Learning Goals
+- Continue working with and gaining confidence with React fundamentals 
+- Continue working with and gaining confidence with React Router to build a multipage application
+- Continue working with and gaining confidence with React Context API
+- REST APIs
+- Asynchronous JavaScript
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
+To get a local copy up and running follow these simple steps.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. In your terminal, clone the repo
+   ```sh
+   git clone git@github.com:zliibbe/ny-times-news-reader.git
+   ```
+2. `cd` into the root directory
+    ```sh
+   cd ny-times-news-reader
+   ```
+3. Install NPM packages
+   ```sh
+   npm i
+   ```
+4. Start the server to view the application in the browser
+   ```sh
+   npm start
+   ``` 
+   - Runs the app in the development mode.
+   - Open http://localhost:3000 to view it in the browser.
+   - The page will reload if you make edits.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Filer By Section
 
-### Code Splitting
+A user can click buttons to navigate to different sections of the newspapers' articles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Article Detail
 
-### Analyzing the Bundle Size
+In any of the views that show articles listed, the user is able to click on the article for more information. If the abstract of the article is interesting for them the user can click `Read More` and visit the article on [The New York Times](https://www.nytimes.com/) to read it in full.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Future Additions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Add Cypress e2e testing
+- Deploy Site
+- Utilize the additional endpoints by adding additional buttons in header
+- Refine styling & responsive design
 
-### Advanced Configuration
+## Technologies Used 
+- [React](https://reactjs.org/)
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start)
+- Javascript
+- HTML
+- CSS
+- [day.js](https://day.js.org/en/)
+- [React Dev Tools (Chrome Dev Tools)](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Contributors
+- [Zach Liibbe](https://github.com/zliibbe)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credits
+- [Create React App](https://create-react-app.dev/)
+- [New York Times API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
