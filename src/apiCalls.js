@@ -9,7 +9,6 @@ const fetchData = (type) => {
       return response.json();
     }
   })
-  // .then(data => console.log(data))
 }
 
 export default fetchData
