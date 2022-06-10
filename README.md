@@ -4,6 +4,9 @@
 
 NYT Top Stories is the place to get your daily news. 
 
+<img width="1358" alt="image" src="https://user-images.githubusercontent.com/63659270/173137461-54c88e92-d281-4233-bbb1-41a9384c7dfe.png">
+
+
 ### Endpoints
 This is a React application built using the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview). The Top Stories API returns an array of articles currently on the specified section.
 
@@ -33,6 +36,7 @@ An API key is required to utilize the API. Here's the [instructions](https://dev
 - Wireframes
   Visit the [Figma](https://www.figma.com/file/iRUEaJ307s8nNkrBffwTaC/NY-Times-Reader) page to see them in full.
 
+<img width="753" alt="image" src="https://user-images.githubusercontent.com/63659270/173137344-2231a09a-44fb-42a1-9e6f-b2207d5a9f69.png">
 
 
 ## Learning Goals
